@@ -16,12 +16,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-package peasy;
+package newpeasy;
 
 import java.io.Serializable;
 
-import peasy.org.apache.commons.math.geometry.Rotation;
-import peasy.org.apache.commons.math.geometry.Vector3D;
+import newpeasy.org.apache.commons.math.geometry.Rotation;
+import newpeasy.org.apache.commons.math.geometry.Vector3D;
 import processing.core.PApplet;
 import processing.core.PGraphics;
 

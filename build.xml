@@ -2,7 +2,7 @@
 
 	<description>
        PeasyCam build
-    </description>
+	</description>
 
 	<property name="processingLibraries" location="/Users/feinberg/Documents/Processing/libraries" />
 
@@ -15,9 +15,9 @@
 
 	<property name="javaVersion" value="1.8" />
 
-    <property file="library.properties" prefix="library" />
+	<property file="library.properties" prefix="library" />
 
-    <property name="author" value="Jonathan Feinberg" />
+	<property name="author" value="Jonathan Feinberg" />
 	<property name="copyright" value="(c) 2013" />
 	<property name="libraryName" value="peasycam" />
 	<property name="yourLink" value="http://mrfeinberg.com" />
@@ -50,7 +50,7 @@
 	libraryClasspath		${libraryClasspath}
 	processing Libraries	${processingLibraries}
 	java version		${javaVersion}
-	</echo>
+		</echo>
 		<echo>building library ...</echo>
 		<!-- Create the time stamp -->
 		<tstamp>
@@ -73,21 +73,17 @@
 			<arg value="ssh jdf@mrfeinberg.com chmod -R a+rX /var/www/html/mrfeinberg.com/peasy"/>
 		</exec>
 	</target>
-	
+
 	<!-- compile the library -->
 	<target name="compile" depends="init" description="compile the source">
 		<echo message="Bump version number in applet"/>
-		<replaceregexp 
-			match='VERSION = "[^"]+"' 
-			replace='VERSION = "${library.version}"' 
-			file="${src}/peasy/PeasyCam.java"/>
+		<replaceregexp match='VERSION = "[^"]+"' replace='VERSION = "${library.version}"' file="${src}/newpeasy/PeasyCam.java"/>
 
 		<echo message="bin: ${bin}"/>
 		<echo message="javaVersion: ${javaVersion}"/>
 		<echo message="library-classpath$ ${libraryClasspath}"/>
-                <mkdir dir="${bin}"/>
-		<javac target="${javaVersion}" destdir="${bin}" source="${javaVersion}"
-			includeantruntime="false">
+		<mkdir dir="${bin}"/>
+		<javac target="${javaVersion}" destdir="${bin}" source="${javaVersion}" includeantruntime="false">
 			<classpath>
 				<path refid="library-classpath" />
 			</classpath>
@@ -102,7 +98,7 @@
 
 		<!-- build the structure for ${dist} -->
 		<mkdir dir="${dist}" />
-		
+
 		<property name="realDist" value="${dist}/peasycam"/>
 		<mkdir dir="${realDist}" />
 
@@ -112,15 +108,15 @@
 		<mkdir dir="${realDist}/src" />
 		<jar jarfile="${realDist}/library/${jarFile}" basedir="${bin}" />
 
-        <copy todir="${realDist}" file="library.properties"/>
-		
+		<copy todir="${realDist}" file="library.properties"/>
+
 		<copy todir="${realDist}/examples">
 			<fileset dir="examples" />
 		</copy>
 		<copy todir="${realDist}/src">
 			<fileset dir="src" />
 		</copy>
-        <copy todir="web" file="${realDist}/library/${jarFile}"/>
+		<copy todir="web" file="${realDist}/library/${jarFile}"/>
 
 		<!-- create the java reference of the library -->
 		<mkdir dir="${reference}" />
@@ -161,7 +157,7 @@
 			<fileset dir="web" />
 		</copy>
 
-        <copy tofile="${dist}/web/peasycam.txt" file="library.properties"/>
+		<copy tofile="${dist}/web/peasycam.txt" file="library.properties"/>
 
 		<replaceregexp file="${dist}/web/index.html" match="##yourLibrary##" replace="${libraryName}" flags="g" />
 		<replaceregexp file="${dist}/web/index.html" match="##author##" replace="${author}" flags="g" />
@@ -185,7 +181,7 @@
 
 
 		<!-- finish organizating library's distribution -->
-        <copy file="${dist}/${libraryName}.zip" todir="${dist}/web" />
+		<copy file="${dist}/${libraryName}.zip" todir="${dist}/web" />
 		<copy file="${dist}/${libraryName}_${library.version}.zip" todir="${dist}/web" />
 
 		<copy todir="${processingLibraries}/peasycam/reference">

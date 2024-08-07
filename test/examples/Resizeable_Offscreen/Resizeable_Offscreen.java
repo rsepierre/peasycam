@@ -1,6 +1,6 @@
 package examples.Resizeable_Offscreen;
 
-import peasy.PeasyCam;
+import newpeasy.PeasyCam;
 import processing.core.PApplet;
 import processing.opengl.PGraphics3D;
 

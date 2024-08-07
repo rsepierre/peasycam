@@ -1,4 +1,4 @@
-import peasy.*;
+import newpeasy.*;
 
 PeasyCam cam;
 

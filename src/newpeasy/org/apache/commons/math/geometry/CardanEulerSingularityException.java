@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package peasy.org.apache.commons.math.geometry;
+package newpeasy.org.apache.commons.math.geometry;
 
-import peasy.org.apache.commons.math.MathException;
+import newpeasy.org.apache.commons.math.MathException;
 
 /**
  * This class represents exceptions thrown while extractiong Cardan or Euler

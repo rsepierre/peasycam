@@ -1,5 +1,5 @@
 
-import peasy.*;
+import newpeasy.*;
 
 
 //

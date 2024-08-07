@@ -1,6 +1,6 @@
 package examples.MultiView_Offscreen;
 
-import peasy.PeasyCam;
+import newpeasy.PeasyCam;
 import processing.core.PApplet;
 import processing.core.PGraphics;
 

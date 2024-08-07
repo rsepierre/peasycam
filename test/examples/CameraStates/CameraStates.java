@@ -1,6 +1,6 @@
 package examples.CameraStates;
 
-import peasy.*;
+import newpeasy.*;
 import processing.core.PApplet;
 
 public class CameraStates extends PApplet {

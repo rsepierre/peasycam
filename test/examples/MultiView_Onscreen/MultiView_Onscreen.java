@@ -1,6 +1,6 @@
 package examples.MultiView_Onscreen;
 
-import peasy.PeasyCam;
+import newpeasy.PeasyCam;
 import processing.core.PApplet;
 import processing.opengl.PGL;
 import processing.opengl.PGraphics3D;

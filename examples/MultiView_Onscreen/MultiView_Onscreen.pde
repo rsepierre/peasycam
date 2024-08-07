@@ -1,6 +1,6 @@
 
 
-import peasy.PeasyCam;
+import newpeasy.PeasyCam;
 
 import processing.opengl.PGL;
 import processing.opengl.PGraphics3D;

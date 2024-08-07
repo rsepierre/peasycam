@@ -1,6 +1,6 @@
 
 
-import peasy.PeasyCam;
+import newpeasy.PeasyCam;
 
 
 //
